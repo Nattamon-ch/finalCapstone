@@ -55,8 +55,8 @@ most_similar = {'score': 0, 'pair': (None, None)}
 least_similar = {'score': 1, 'pair': (None, None)}
 
 # Compare similarity between review pairs
-for i in range(min(20, len(clean_data))):
-    for j in range(i + 1, min(20, len(clean_data))):
+for i in range(min(25, len(clean_data))):
+    for j in range(i + 1, min(25, len(clean_data))):
         doc1 = nlp2(clean_data['reviews.text'].iloc[i])  # Process ith review
         doc2 = nlp2(clean_data['reviews.text'].iloc[j])  # Process jth review
         score = doc1.similarity(doc2)  # Calculate similarity score
