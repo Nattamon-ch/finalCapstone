@@ -74,13 +74,13 @@ print(f"Most similar reviews are at index {most_similar['pair']} with a score of
 print(f"Least similar reviews are at index {least_similar['pair']} with a score of {least_similar['score']}")
 
 # Retrieve and print the most and least similar review pairs for analysis
-most_similar_review_pair = clean_data.iloc[list(most_similar['pair'])]['reviews.text']
-least_similar_review_pair = clean_data.iloc[list(least_similar['pair'])]['reviews.text']
+most_SR_pair = clean_data.iloc[list(most_similar['pair'])]['reviews.text']
+least_SR_pair = clean_data.iloc[list(least_similar['pair'])]['reviews.text']
 
 # Print sentiment analysis for the most and least similar review pairs
-for review in most_similar_review_pair:
+for review in most_SR_pair:
     print(f"Review: {review}")
     print(f"Sentiment: {sentiment_analysis(review)}")
-for review in least_similar_review_pair:
+for review in least_SR_pair:
     print(f"Review: {review}")
     print(f"Sentiment: {sentiment_analysis(review)}")
